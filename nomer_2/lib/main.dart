@@ -24,92 +24,203 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Test 1 - C14190104'),
+      home: const Home(),
     );
   }
 }
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+ class Home extends StatelessWidget {
+   const Home({ Key? key }) : super(key: key);
+ 
+   @override
+   Widget build(BuildContext context) {
+     return Scaffold(
+       appBar: AppBar(
+         title: Text("Test 1 -c14190104"),
+       ),
+       body: Padding(
+         padding: EdgeInsets.all(16),
+         child: Container(
+           child: Column(
+             crossAxisAlignment: CrossAxisAlignment.start,
+             children: [
+               Text("Popular Courses: ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24,),),
+               SizedBox(height: 16,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      children: [
+                        Icon(Icons.calendar_month_rounded),
+                        Text("science")
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Icon(Icons.coffee),
+                        Text("Cooking")
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Icon(Icons.numbers),
+                        Text("Math")
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Icon(Icons.biotech_outlined),
+                        Text("Biology")
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Icon(Icons.design_services),
+                        Text("Design")
+                      ],
+                    )
+                  ],
+                ),
+                SizedBox(height: 16,),
+                Text("Continue Learning: ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24,),),
+                SizedBox(height: 16,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      color: Colors.lightGreen,
+                      child: Padding(
+                        padding: EdgeInsets.all(8),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Icon(Icons.calendar_month_rounded, size: 40,),
+                          SizedBox(height: 8,),
+                          Text("science", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18,),),
+                          Text("Chapter 4"),
+                          SizedBox(height: 8,),
+                          Row(
+                            children: [
+                              Icon(Icons.alarm,),
+                              SizedBox(height: 8,),
+                              Text("27 Mins"),
+                            ],
+                          )
+                        ]),
+                        ) 
+                      
+                    ),
+                    Container(
+                      color: Colors.lightGreen,
+                      child: Padding(
+                        padding: EdgeInsets.all(8),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Icon(Icons.star, size: 40,),
+                          SizedBox(height: 8,),
+                          Text("Design", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18,),),
+                          Text("Chapter 5"),
+                          SizedBox(height: 8,),
+                          Row(
+                            children: [
+                              Icon(Icons.alarm,),
+                              SizedBox(height: 8,),
+                              Text("30 Mins"),
+                            ],
+                          )
+                        ]),
+                        ) 
+                      
+                    ),
+                    Container(
+                      color: Colors.lightGreen,
+                      child: Padding(
+                        padding: EdgeInsets.all(8),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Icon(Icons.biotech, size: 40,),
+                          SizedBox(height: 8,),
+                          Text("Biology", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18,),),
+                          Text("Chapter 1"),
+                          SizedBox(height: 8,),
+                          Row(
+                            children: [
+                              Icon(Icons.alarm,),
+                              SizedBox(height: 8,),
+                              Text("25 Mins"),
+                            ],
+                          )
+                        ]),
+                        ) 
+                      
+                    ),
+                    Container(
+                      color: Colors.lightGreen,
+                      child: Padding(
+                        padding: EdgeInsets.all(8),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Icon(Icons.coffee, size: 40,),
+                          SizedBox(height: 8,),
+                          Text("Cooking", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18,),),
+                          Text("Chapter 4"),
+                          SizedBox(height: 8,),
+                          Row(
+                            children: [
+                              Icon(Icons.alarm,),
+                              SizedBox(height: 8,),
+                              Text("18 Mins"),
+                            ],
+                          )
+                        ]),
+                        ) 
+                      
+                    ),
+                  ],
+                ),
+                SizedBox(height: 16,),
+                Text("Last Seen Courses: ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24,),),
+                SizedBox(height: 16,),
+                Column(
+                  children: [
+                    Container(
+                      color: Colors.purpleAccent,
+                      child: Padding(
+                        padding: EdgeInsets.all(16),
+                        child:  Row(
+                        children: [
+                          Icon(Icons.image),
+                          Text("Basics of Designing"),
+                          Icon(Icons.play_circle_outline)
+                        ],
+                      ),
+                      ) 
+                     
+                    )
+                  ],
+                )
+             ],
+           ),
+         ),
+       ),
+       bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.explore),
+            label: 'Explore',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat),
+            label: 'Chat',
+          ),
+        ],
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
-}
+     );
+   }
+ }
